@@ -1,0 +1,56 @@
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.willyoube-gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.button{
+    padding:14px 24px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.yesButton{
+    background-color: rgb(5, 112, 21);
+    border-radius: 8px;
+    color: #fff;
+}
+
+.noButton{
+    background-color: rgb(61, 58, 58);
+        border-radius: 8px;
+        color: #fff;
+}
+
+.accepted-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("./bg.jpg");
+    object-fit:cover;
+    width: 100%;
+}
+
+.accepted-container img{
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+}

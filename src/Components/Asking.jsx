@@ -9,7 +9,7 @@ const Asking = ({ currentState, handleAccept, handleReject, noButtonText, yesBut
         }
         <div className="buttonContainer">
             <button className="yesButton button" style={{ width: `${yesButtonSize.width + "px"}`, height: `${yesButtonSize.height + "px"}` }} onClick={handleAccept}>💘Yes</button>
-            <button className="noButton button" onClick={handleReject}>💔{noButtonText}</button>
+            <button className="noButton button" style={{ width: "100px", height: "70px" }} onClick={handleReject}>💔{noButtonText}</button>
         </div>
     </div>
 }

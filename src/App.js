@@ -10,7 +10,7 @@ function App() {
   const [noState, setNoState] = useState(false);
   const [yesButtonSize, setYesButtonSize] = useState({
     width: 100,
-    height: 100,
+    height: 70,
   });
 
   const appContainer = useRef();

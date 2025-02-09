@@ -4,20 +4,27 @@ import Asking from "./Components/Asking";
 import Accepted from "./Components/Accepted";
 import emailjs from "@emailjs/browser";
 function App() {
-  const [accepted, setAccepted] = useState(false);
-  const [noButtonText, setNoButtonText] = useState("No");
-  const [rejectionIndex, setRejectionIndex] = useState(0);
-  const [noState, setNoState] = useState(false);
+  //initial state of the viewing page
+  const [accepted, setAccepted] = useState(false); // state that determines which page to view
+  const [noButtonText, setNoButtonText] = useState("No"); // state of the label of the no button
+  const [rejectionIndex, setRejectionIndex] = useState(0); // rejection index counting the number of times no was clicked
+  const [noState, setNoState] = useState(false); //state that determines which gif to view
+
+  //the initial size of the yes button
   const [yesButtonSize, setYesButtonSize] = useState({
     width: 100,
     height: 70,
   });
 
+  // since i am using email js to send email if the proposal was accepted.
+  // It needs to reference the form container
   const appContainer = useRef();
+
+  // function to handle the accepted button
   const handleAccept = (e) => {
     e.preventDefault();
     setAccepted(true);
-    console.log(process.env.REACT_APP_EMAILPUBLIC_KEY);
+    // to send email once the proposal is accepted
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -36,8 +43,10 @@ function App() {
         }
       );
   };
+  //function to handle rejection
   const hanldeReject = (e) => {
     e.preventDefault();
+    // array of all the rejection texts
     const rejectionTexts = [
       "Haina Hola",
       "Feri Sochana",

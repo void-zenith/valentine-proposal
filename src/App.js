@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useRef } from "react";
+import React from "react";
 
 import { Routes, Route } from "react-router";
 import ValentineProposal from "./Container/ValentineProposal";
